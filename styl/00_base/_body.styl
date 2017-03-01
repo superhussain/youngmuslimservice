@@ -1,12 +1,20 @@
 * 
   box-sizing border-box
   
+body
+  overflow-x hidden
+  font-size 1.25em
+  @media phablet
+    font-size 1.4em
+  @media tablet
+    font-size 1.5em
+  
 section, footer
   > .wrapper
     width: 100%
     max-width: 1000px
     margin: 0 auto
-    padding: 0 1em
+    padding: 0 1.5em
   .section-heading
     text-align center
     h2

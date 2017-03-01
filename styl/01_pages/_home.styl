@@ -18,8 +18,9 @@ body.home
         top: -50%
         left: -50%
         width: 200%
-        height: 200%
-        // height: (800px * 2)
+        // height: 200%
+        // height: (680px * 2)
+        height 200%
         overflow hidden
         z-index -1
         &:after
@@ -85,9 +86,20 @@ body.home
         .retreat__copy
           // span(1/2)
         .retreat__video
-          text-align center
-          padding: 2em 0
+          position relative
+          width: 100%
+          height 0
+          max-width 560px
+          margin 0 auto
+          padding-bottom 56.25%
+          @media tablet
+            padding-bottom ((500 / 800) * 56.25% + 4%)
           iframe
+            position absolute
+            width 100%
+            height 100%;
+            left 0
+            top 0
             border-radius 0.5em
             box-shadow 0 50px 50px -40px rgba($black, 0.5)
             transform scale(0.99)
@@ -110,7 +122,7 @@ body.home
         color $white
         border 4px solid $white
         background-color transparent
-        font-size 2em
+        font-size 1.25em
         display block
         margin 0
         height auto
@@ -118,6 +130,10 @@ body.home
         padding 0.75em 1.5em
         border-radius 10em
         transition 200ms ease-in-out
+        @media phablet
+          font-size 1.5em
+        @media tablet
+          font-size 1.75em
         &:hover
           background-color $white
           color $primary
@@ -126,6 +142,10 @@ body.home
       background-color $light-2
       padding: 6em 0
       color $dark
+      .wrapper
+        padding 0
+        @media tablet
+          padding 0 1.5em
       .section-content
         padding-top 2em
         width: 100%
@@ -133,20 +153,30 @@ body.home
         margin 0 auto
         .hms-testimonial-container
           background-color $light-1
-          padding 3em
+          padding 3em 1.5em
           display flex
           flex-wrap wrap
           justify-content center
           align-items center
+          @media tablet
+            padding 3em
           .image
             object-fit cover
             object-position top
             border-radius 50%
-            margin-right 1em
             box-shadow 0 0 1em rgba($black, 0.25)
+            @media tablet
+              margin-right 1em
           .author
             line-height 1
             font-size 0.8em
+            padding-top 1.5em
+            width 100%
+            text-align center
+            @media tablet
+              padding-top 0
+              width initial
+              text-align left
             strong
               font-size 1.5em
               font-weight 600

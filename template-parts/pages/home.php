@@ -47,7 +47,7 @@
             <?php the_field('home_leadership_retreat_lite'); ?>
           </div>
           <div class="retreat__video">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/rFhQdAi2YLY" frameborder="0" allowfullscreen></iframe>
+            <iframe src="https://www.youtube.com/embed/rFhQdAi2YLY" frameborder="0" allowfullscreen></iframe>
           </div>
         </div>
       </div>
