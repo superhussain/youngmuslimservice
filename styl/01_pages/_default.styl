@@ -1,0 +1,51 @@
+body.page
+  section.hero
+    height 560px
+    background-color $primary
+    display flex
+    align-items center
+    justify-content center
+    position relative
+    overflow hidden
+    .wrapper
+      width: 100%
+      max-width 1000px
+      margin: 0 auto
+    .hero__heading-container
+      text-align center
+      color $white
+      .hero__title
+        font-size 5em
+        font-weight 300
+  
+  section.content
+    background-color $light-1
+    padding: 6em 0
+    color $dark
+    .wrapper
+      width: 100%
+      max-width 800px
+      margin: 0 auto
+    h2
+      font-weight 600
+      font-size 5rem
+      margin-bottom 1em
+      position: relative
+      text-align center
+      margin-top: 2em
+      &:first-child
+        margin-top 0
+      &:after
+        content ''
+        position absolute
+        bottom -0.35em
+        width 100px
+        left 50%
+        margin-left -50px
+        background-color $orange
+        padding: 3px
+    p 
+      text-align justify
+      font-size 1.25em
+      > span
+        font-weight 300 !important
