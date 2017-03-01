@@ -1,0 +1,29 @@
+* 
+  box-sizing border-box
+  
+section, footer
+  > .wrapper
+    width: 100%
+    max-width: 1000px
+    margin: 0 auto
+    padding: 0 1em
+  .section-heading
+    text-align center
+    h2
+      font-weight 600
+      font-size 5rem
+      margin-bottom 1em
+      position: relative
+    &.heading--underline h2:after
+      content ''
+      position absolute
+      bottom -0.35em
+      width 100px
+      left 50%
+      margin-left -50px
+      background-color $orange
+      padding: 3px
+  .section-content
+    font-size 1.25em
+    font-weight 300
+    text-align justify
