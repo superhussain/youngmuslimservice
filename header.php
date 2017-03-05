@@ -46,4 +46,8 @@
 		</div>
 	</header><!-- #masthead -->
 
+	<div class="following-cta hide">
+		<a href="<?php echo get_permalink(31); ?>">Register</a>
+	</div>
+
 	<div id="content" class="site-content">

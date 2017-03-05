@@ -43,7 +43,7 @@
     right 1.5em
     margin-top 1em
     position: absolute
-    top 4.1em
+    top 60px
     opacity: 0
     pointer-events none
     z-index -1
@@ -181,3 +181,26 @@ body.admin-bar .site-header
     top 46px
   @media (min-width 782px)
     top 32px
+    
+// following cta
+.following-cta
+  position fixed
+  display block
+  right 0
+  top 30vh
+  transform rotate(-90deg) translate(0, 128%)
+  background-color darken($primary, 15%)
+  z-index 999
+  transition 200ms ease-in-out
+  &.hide
+    display none
+  &:hover
+    background-color darken($primary, 10%)
+  a
+    display block
+    padding 0.5em 1.75em
+    color $white
+    text-decoration none
+    text-transform uppercase
+    letter-spacing 2px
+    font-weight 300

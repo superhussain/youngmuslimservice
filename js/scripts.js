@@ -4,6 +4,11 @@ $(document).ready(function() {
   navScroll();
   hamburger();
   heroRotate();
+  followingCTA();
+
+  $(window).scroll(function() {
+    followingCTA();
+  });
 });
 
 function navScroll() {
@@ -42,5 +47,15 @@ function heroRotate() {
   function rotateHeroBg(x) {
     $('.hero__backgrounds img').removeClass('shown');
     $('.hero__backgrounds img:nth-of-type('+x+')').addClass('shown');
+  }
+}
+
+function followingCTA() {
+  var scrollTop = $(window).scrollTop(),
+      introTop = $('section.hero') ? $('section.hero').height() : 680;
+  if (scrollTop >= introTop) {
+    $('.following-cta').removeClass('hide');
+  } else {
+    $('.following-cta').addClass('hide');
   }
 }
