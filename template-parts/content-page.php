@@ -11,6 +11,7 @@
   $group = get_field('group');
   $includes = array(
    'pages/home.php',
+   'pages/about.php',
    'pages/retreat.php',
   );
 

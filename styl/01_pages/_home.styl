@@ -183,6 +183,8 @@ body.page-home #main
         padding 0 1.5em
     .section-content
       padding-top 2em
+      @media tablet
+        padding 2em
       .hms-testimonial-container
         background-color $light-1
         padding 3em 1.5em
@@ -212,26 +214,46 @@ body.page-home #main
           strong
             font-size 1.5em
             font-weight 600
-        .testimonial
+        .testimonial, .cf-caption
           padding-top: 2em
+          position relative
+        .cf-caption
+          &:before, &:after
+            position absolute
+            font-size 15em
+            font-weight 900
+            font-family sans-serif
+            opacity: 0.05
+            pointer-events none
+          &:before
+            content '“'
+            top 0
+            left 0
+            line-height 0.75
+          &:after
+            content '”'
+            right 0
+            bottom -0.2em
+            line-height 0
       .controls
         display flex
         justify-content center
+        display none
         a
           text-decoration none
           font-size 1.5em
-          padding: 0.25em 0.75em
+          padding: 0.125em 0.75em
           margin-top 1rem
           font-weight 600
           color $dark
           background-color transparent
-          border-radius 0.35em
+          // border-radius 0.35em
           transition 200ms ease-in-out
           &:hover
             // color $primary
             background-color darken($light-1, 5%)
         .playpause
-          padding-top 0.65em
+          padding-top 0.5em
         .prev, .next
           font-size 2em
           margin-bottom 0.125em

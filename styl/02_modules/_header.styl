@@ -38,30 +38,31 @@
     height 100%
   
   .main-navigation
-    width 100%
+    // width 100%
+    left 1.5em
+    right 1.5em
     margin-top 1em
     position: absolute
     top 4.1em
-    // display none
     opacity: 0
     pointer-events none
     z-index -1
-    transform translateY(-100px)
-    transition 200ms ease-in-out
+    transform scaleY(0)
+    transform-origin top
+    transition transform 200ms cubic-bezier(0.56, 0.19, 0.4, 1.52)
     @media desktop
       opacity 1
       pointer-events all
       z-index 1
-      transform translateY(0px)
+      transform scaleY(1)
       width initial
       margin 0
       position initial
     &.open
-      // display block
       opacity 1
       pointer-events all
       z-index 1
-      transform translateY(0px)
+      transform scaleY(1)
     .menu
       list-style none
       margin-bottom: 0
@@ -131,8 +132,8 @@
           letter-spacing: 1px
           margin: 0 0 0 2em
           padding-bottom: 0em
-          color: $white
-          background-color: $blue
+          color: rgba($white, 0.6)
+          background-color $dark
           padding: 0.75em 1.25em
           border-radius 10em
           text-decoration: none
@@ -146,11 +147,16 @@
           &:after
             content none
           @media desktop
+            color: $white
+            background-color: $blue
             margin 0 0 0 2em
             border-radius 10em
             padding 0.75em 1.25em
           &:hover
-            background-color darken($blue, 10%)
+            color: $white
+            border-bottom none
+            @media desktop
+              background-color darken($blue, 10%)
             
 // sticky header
 .site-header.sticky

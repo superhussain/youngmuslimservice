@@ -72,14 +72,22 @@
     </div>
   </section>
 
-  <section class="testimonials">
-    <div class="wrapper">
-      <div class="section-heading heading--underline">
-        <h2>Testimonials</h2>
+  <?php if (get_field('home_testimonials_short_code')): ?>
+    <section class="testimonials">
+      <div class="wrapper">
+        <div class="section-heading heading--underline">
+          <h2>Testimonials</h2>
+        </div>
+        <div class="section-content">
+          <?php
+            $testimonials_shortcode = get_field('home_testimonials_short_code'); 
+            echo do_shortcode($testimonials_shortcode);
+          ?>
+        </div>
+        <div class="section-cta">
+          <a href="<?php echo get_permalink(27); ?>" class="button button-cta">Read More</a>
+        </div>
       </div>
-      <div class="section-content">
-        <?php echo do_shortcode("[hms_testimonials_rotating template='25' seconds='10' show_links='true']"); ?>
-      </div>
-    </div>
-  </section>
+    </section>
+  <?php endif; ?>
 <?php endif; ?>

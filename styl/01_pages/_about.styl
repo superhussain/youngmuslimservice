@@ -1,0 +1,24 @@
+body.page-about-us #main
+  section
+    .section-content, .section-cta
+      width: 100%
+      max-width 800px
+      margin 0 auto
+      
+  section:not(.hero)
+    // background-color $light-1
+    // color $dark
+    padding: 6em 0
+    .section-content
+      h4
+        font-weight 600
+        margin-top 2em
+      p
+        font-size 1em
+        line-height 1.85
+      p > span
+        font-weight 300 !important
+    &:nth-of-type(2)
+      background-color $light-2
+    &:nth-of-type(3)
+      background-color $light-1
