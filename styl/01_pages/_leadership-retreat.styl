@@ -81,3 +81,156 @@ body.page-leadership-retreat #main
         &:hover
           transform scale(1)
           box-shadow 0 60px 70px -55px rgba($black, 0.25)
+          
+  section:not(.hero)
+    padding: 6em 0
+    .section-content
+      padding-top 1em
+      h4
+        font-weight 600
+        margin-top 2em
+      p
+        font-size 1em
+        line-height 1.85
+      p > span
+        font-weight 300 !important
+      blockquote
+        margin 0
+        padding 0.75em 1.5em
+        background-color rgba($dark, 0.05)
+        margin-bottom 1.5em
+        border-left 5px solid $primary
+        font-style italic
+        font-weight 500
+        color rgba($dark, 0.5)
+        p
+          margin 0
+    &:nth-of-type(2)
+      background-color $light-2
+    &:nth-of-type(3)
+      background-color $dark
+      color $light-2
+    &:nth-of-type(4)
+      background-color $light-1
+  
+  section.retreat__faq
+    .section-content
+      > p span
+        font-weight 600 !important
+      blockquote
+        font-size 0.85em
+  
+  section.testimonials
+    background-color $light-2
+    padding: 6em 0
+    color $dark
+    .wrapper
+      padding 0
+      @media tablet
+        padding 0 1.5em
+    .section-content
+      padding 2em 0
+      @media tablet
+        padding 2em
+      .hms-testimonial-container
+        background-color $light-1
+        padding 3em 1.5em
+        display flex
+        flex-wrap wrap
+        justify-content center
+        align-items center
+        @media tablet
+          padding 3em
+        .image
+          object-fit cover
+          object-position top
+          border-radius 50%
+          box-shadow 0 0 1em rgba($black, 0.25)
+          @media tablet
+            margin-right 1em
+        .author
+          line-height 1
+          font-size 0.8em
+          padding-top 1.5em
+          width 100%
+          text-align center
+          @media tablet
+            padding-top 0
+            width initial
+            text-align left
+          strong
+            font-size 1.5em
+            font-weight 600
+        .testimonial, .cf-caption
+          padding-top: 2em
+          position relative
+        .cf-caption
+          &:before, &:after
+            position absolute
+            font-size 15em
+            font-weight 900
+            font-family sans-serif
+            opacity: 0.05
+            pointer-events none
+          &:before
+            content '“'
+            top 0
+            left 0
+            line-height 0.75
+          &:after
+            content '”'
+            right 0
+            bottom -0.2em
+            line-height 0
+      .controls
+        display flex
+        justify-content center
+        display none
+        a
+          text-decoration none
+          font-size 1.5em
+          padding: 0.125em 0.75em
+          margin-top 1rem
+          font-weight 600
+          color $dark
+          background-color transparent
+          // border-radius 0.35em
+          transition 200ms ease-in-out
+          &:hover
+            // color $primary
+            background-color darken($light-1, 5%)
+        .playpause
+          padding-top 0.5em
+        .prev, .next
+          font-size 2em
+          margin-bottom 0.125em
+          
+  section.register-cta
+    // background-color $primary
+    background linear-gradient(to top, $primary, darken($primary, 25%))
+    padding: 6em 0
+    text-align center
+    .section-content
+      display flex
+      justify-content center
+      align-items center
+    .register__button
+      color $white
+      border 4px solid $white
+      background-color transparent
+      font-size 1em
+      display block
+      margin 0
+      height auto
+      font-weight 500
+      padding 0.75em 1.5em
+      border-radius 10em
+      transition 200ms ease-in-out
+      @media phablet
+        font-size 1.25em
+      @media tablet
+        font-size 1.5em
+      &:hover
+        background-color $white
+        color $primary
+        
