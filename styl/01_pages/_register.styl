@@ -1,0 +1,70 @@
+body.page-register #main
+  section
+    .section-content, .section-cta
+      width: 100%
+      max-width 800px
+      margin 0 auto
+  section.content
+    background-color $light-2
+    fieldset
+      border none
+      border-radius 0
+      background-color $light-1
+      padding 2em
+    .vfb-legend h3
+      font-size 2em
+      font-weight 700
+      color rgba($black, 0.8)
+    .vfb-item
+      padding 1em 0 !important
+      input:not(.vfb-submit), textarea
+        border-radius 0
+        padding 0.5em
+    .vfb-desc
+      font-size 1.1em
+    .vfb-item-submit
+      text-align center
+    .vfb-submit
+      margin-top 2em
+      height auto
+      width 50%
+      min-width 200px
+      font-family: "Lato"
+      font-weight: 600
+      text-transform: uppercase
+      letter-spacing: 1px
+      padding-bottom: 0em
+      color: $white
+      background-color: $primary
+      padding: 0.75em 1.25em
+      border-radius 10em
+      text-decoration: none
+      white-space: nowrap
+      border: none
+      transition: all 200ms ease-in-out
+      &:hover
+        background-color darken($primary, 8%)
+
+
+
+
+    .gform_wrapper
+      font-size 1.1em
+    .gsection
+      border none
+      padding 3em 0
+    .gsection_title
+      font-size 2em
+      &:after
+        bottom -0.5em
+    label, .gfield_description
+      color rgba($black, 0.5)
+    .gfield_label
+      color rgba($black, 0.8)
+    .gfield_radio
+      > li
+        display flex
+        align-items center
+        input
+          margin 0.5em
+          margin-left 1px

@@ -31,7 +31,7 @@
 	          if (!empty($header_logo)) { ?>
 	            <img src="<?php echo $header_logo['url']; ?>" alt="Young Muslim Service" class="site-logo" />
 	        <?php } else { ?>
-		        <img src="<?php echo site_url() . '/wp-content/uploads/2017/02/logo-wide-white.png'; ?>" alt="Young Muslim Service" class="site-logo" />
+		        <img src="<?php echo site_url() . '/wp-content/uploads/2017/02/logo-wide-mixed.png'; ?>" alt="Young Muslim Service" class="site-logo" />
 	        <?php } ?>
 				</a>
 				<div class="hamburger-menu">

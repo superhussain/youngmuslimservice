@@ -5,18 +5,20 @@
         <?php 
           $image = get_field('home_hero_background_'.$i);
           if (!empty($image)): ?>
-            <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+            <img src="<?php echo $image['url']; ?>" class="<?php echo ($i === 1) ? 'shown' : ''; ?>" alt="<?php echo $image['alt']; ?>" />
         <?php endif; ?>
-      <?php }?>
+      <?php } ?>
     </div>
     <div class="wrapper">
       <div class="hero__heading-container">
-        <?php if (get_field('home_hero_title')): ?>
+        <?php if (get_field('home_hero_title')) { ?>
           <h1 class="hero__title"><?php the_field('home_hero_title'); ?></h1>
-        <?php endif; ?>
+        <?php } else { ?>
+          <?php the_title('<h1 class="hero__title">', '</h1>'); ?>
+        <?php } ?>
         <?php for($i = 1; $i < 5; ++$i) { ?>
           <?php if (get_field('home_hero_rotating_text_'.$i)): ?>
-              <h2 class="hero__subtitle"><?php the_field('home_hero_rotating_text_'.$i); ?></h2>
+            <h2 class="hero__subtitle <?php echo ($i === 1) ? 'shown' : ''; ?>"><?php the_field('home_hero_rotating_text_'.$i); ?></h2>
           <?php endif; ?>
         <?php }?>
       </div>
@@ -32,6 +34,9 @@
         <div class="section-content">
           <?php the_field('home_about_us_lite'); ?>
         </div>
+        <div class="section-cta">
+          <a href="<?php echo get_permalink(23); ?>" class="button button-cta">Learn More</a>
+        </div>
       </div>
     </section>
   <?php endif; ?>
@@ -46,9 +51,14 @@
           <div class="retreat__copy">
             <?php the_field('home_leadership_retreat_lite'); ?>
           </div>
-          <div class="retreat__video">
-            <iframe src="https://www.youtube.com/embed/rFhQdAi2YLY" frameborder="0" allowfullscreen></iframe>
-          </div>
+          <?php if (get_field('home_video_code')): ?>
+            <div class="retreat__video">
+              <iframe src="https://www.youtube.com/embed/<?php the_field('home_video_code'); ?>" frameborder="0" allowfullscreen></iframe>
+            </div>
+          <?php endif; ?>
+        </div>
+        <div class="section-cta">
+          <a href="<?php echo get_permalink(25); ?>" class="button button-cta">Learn More</a>
         </div>
       </div>
     </section>

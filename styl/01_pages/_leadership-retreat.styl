@@ -1,0 +1,83 @@
+body.page-leadership-retreat #main
+  section
+    .section-content, .section-cta
+      width: 100%
+      max-width 800px
+      margin 0 auto
+      
+  section.hero
+    height 680px
+    .wrapper
+      display flex
+      align-items center
+      max-width 1000px
+      flex-wrap wrap
+      @media desktop
+        flex-wrap nowrap
+    .hero__heading-container
+      width 100%
+      color $white
+      padding 0
+      padding-bottom 4em
+      @media phablet
+        white-space nowrap
+      @media desktop
+        padding 0
+        padding-right 4em
+        text-align left
+      .hero__title
+        font-size 3em
+        font-weight 600
+      .hero__subtitle
+        width 100%
+        font-size 1.75em
+        font-weight 300
+        color rgba($white, 0.75)
+        &:before, &:after
+          content none
+      .hero__register-button
+        border 2px solid rgba($white, 0.8)
+        background-color transparent
+        height auto
+        margin-top 4em
+        font-size 1em
+        font-weight 500
+        padding 0.35em 1.5em
+        color $white
+        // border-radius 10em
+        transition 200ms ease-in-out
+        display none
+        @media desktop
+          display inline-block
+        &:hover
+          background-color $white
+          color $primary
+    .hero__video
+      position relative
+      width: 100%
+      height 0
+      max-width 480px
+      margin 0 auto
+      padding-bottom 56.25%
+      @media mobile
+        padding-bottom 52%
+      @media phablet
+        padding-bottom 44%
+      @media tablet
+        padding-bottom 28.5%
+      @media desktop
+        min-width 400px
+        padding-bottom 23.5%
+      iframe
+        position absolute
+        width 100%
+        height 100%;
+        left 0
+        top 0
+        border-radius 0.5em
+        box-shadow 0 50px 50px -40px rgba($black, 0.25)
+        transform scale(0.99)
+        transition 200ms ease-in-out
+        &:hover
+          transform scale(1)
+          box-shadow 0 60px 70px -55px rgba($black, 0.25)

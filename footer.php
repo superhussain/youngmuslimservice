@@ -19,6 +19,23 @@
       <div class="footer__copyright">
         Copyright &copy; <a href="/">Young Muslim Service</a> 2017. All rights reserved.
       </div>
+      <div class="footer__social-links">
+        <?php if (get_field('social_facebook')): ?>
+          <a href="<?php the_field('social_facebook'); ?>" target="_blank" class="footer__social--facebook"><i class="fa fa-facebook-official"></i></a>
+        <?php endif; ?>
+        <?php if (get_field('social_twitter')): ?>
+          <a href="<?php the_field('social_twitter'); ?>" target="_blank" class="footer__social--twitter"><i class="fa fa-twitter"></i></a>
+        <?php endif; ?>
+        <?php if (get_field('social_instagram')): ?>
+          <a href="<?php the_field('social_instagram'); ?>" target="_blank" class="footer__social--instagram"><i class="fa fa-instagram"></i></a>
+        <?php endif; ?>
+        <?php if (get_field('social_youtube')): ?>
+          <a href="<?php the_field('social_youtube'); ?>" target="_blank" class="footer__social--youtube"><i class="fa fa-youtube-play"></i></a>
+        <?php endif; ?>
+        <?php if (get_field('social_flickr')): ?>
+          <a href="<?php the_field('social_flickr'); ?>" target="_blank" class="footer__social--flickr"><i class="fa fa-flickr"></i></a>
+        <?php endif; ?>
+      </div>
     </div>
 	</footer><!-- #colophon -->
 </div><!-- #page -->

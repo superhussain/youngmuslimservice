@@ -16,3 +16,36 @@
       font-weight 500
       &:hover
         text-decoration underline
+  .footer__social-links
+    display flex
+    align-items center
+    justify-content center
+    padding-top 2em
+    a
+      background-color lighten($dark, 15%)
+      display flex
+      justify-content center
+      align-items center
+      width 50px
+      height 50px
+      margin 0 0.5em
+      text-decoration none
+      border-radius 50%
+      transition 200ms ease-in-out
+      &:hover
+        background-color $primary
+        transform translateY(-0.25em)
+      > i
+        color rgba($white, 0.75)
+        font-size 1.5em
+    .footer__social--facebook:hover
+      background-color $social-facebook
+    .footer__social--twitter:hover
+      background-color $social-twitter
+    .footer__social--instagram:hover
+      background-color $social-instagram
+    .footer__social--youtube:hover
+      background-color $social-youtube
+    .footer__social--flickr:hover
+      background-color $social-flickr
+      
