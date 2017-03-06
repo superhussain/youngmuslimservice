@@ -98,5 +98,7 @@ function galleryToggle() {
       e.stopPropagation();
       e.preventDefault();
     });
+
+    galleryItems.find('a').on('click', function(e) { e.preventDefault(); });
   }
 }
