@@ -125,6 +125,12 @@ function add_slug_body_class( $classes ) {
 }
 add_filter( 'body_class', 'add_slug_body_class' );
 
+// Move Yoast to bottom
+function yoasttobottom() {
+	return 'low';
+}
+add_filter( 'wpseo_metabox_prio', 'yoasttobottom' );
+
 /**
  * Implement the Custom Header feature.
  */

@@ -1,0 +1,67 @@
+body.page-past-events #main
+  section
+    .section-content, .section-cta
+      width: 100%
+      max-width 800px
+      margin 0 auto
+  
+  section.gallery
+    background-color $light-1
+    padding: 6em 0
+    color $dark
+    > .wrapper
+      max-width 1200px
+      // display flex
+    .gallery__controls
+      width 100%
+      max-width 500px
+      margin 0 auto 5em
+      @media desktop
+        width 300px
+        max-width none
+        margin initial
+        padding-top 9em
+        padding-right 3em
+        position absolute
+      &.fixed
+        position fixed
+        top 120px
+    .gallery__list
+      background-color rgba($black, 0.05)
+      list-style none
+      padding 3em
+      @media desktop
+        padding 3em 2em
+    .gallery__item > a
+      color rgba($black, 0.3)
+      font-weight 900
+      text-decoration none
+      text-transform uppercase
+      letter-spacing 1px
+      transition 200ms ease-in-out
+      &:hover
+        color rgba($black, 0.5)
+    .gallery__item.active > a
+      color $orange
+      &:before
+        content '» '
+    .gallery__images
+      width 100%
+      @media desktop
+        padding-left 300px
+      > div
+        display none
+        &.active
+          display block
+      h2
+        font-weight 600
+        position relative
+        margin-bottom 2em
+        &:after
+          content ''
+          position absolute
+          bottom -0.45em
+          width 100px
+          left 0
+          background-color $orange
+          padding: 3px

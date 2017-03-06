@@ -13,6 +13,7 @@
    'pages/home.php',
    'pages/about.php',
    'pages/retreat.php',
+   'pages/past-events.php',
   );
 
   foreach ($includes as $page) {

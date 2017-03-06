@@ -5,6 +5,8 @@ $(document).ready(function() {
   hamburger();
   heroRotate();
   followingCTA();
+  gallerySideBarFixed();
+  galleryToggle();
 
   $(window).scroll(function() {
     followingCTA();
@@ -57,5 +59,44 @@ function followingCTA() {
     $('.following-cta').removeClass('hide');
   } else {
     $('.following-cta').addClass('hide');
+  }
+}
+
+function gallerySideBarFixed() {
+  $(window).on('scroll', function() {
+    if (location.href.indexOf('_id=41') > -1 || location.href.indexOf('/past-events') > -1) {
+      if (window.matchMedia("(min-width: 1000px)").matches) {
+        var vscroll = document.body.scrollTop;
+        if (vscroll > 480) {
+          $('.gallery__controls').addClass('fixed');
+        } else {
+          $('.gallery__controls').removeClass('fixed');
+        }
+      } else {
+        $('.gallery__controls').removeClass('fixed');
+      }
+    }
+  });
+}
+
+function galleryToggle() {
+  if (location.href.indexOf('_id=41') > -1 || location.href.indexOf('/past-events') > -1) {
+    var galleryItems = $('.page-past-events .gallery__item');
+    var galleries = $('.page-past-events .gallery__images');
+
+    galleryItems.on('click', function(e) {
+      if (!$(this).hasClass('active')) {
+        var target = $(this).attr('class').split(' ')[1].split('item__')[1];
+
+        galleryItems.removeClass('active');
+        $(this).addClass('active');
+
+        galleries.find('> div').removeClass('active');
+        galleries.find('.'+target).addClass('active');
+      }
+
+      e.stopPropagation();
+      e.preventDefault();
+    });
   }
 }
