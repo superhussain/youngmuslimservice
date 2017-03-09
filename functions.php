@@ -131,6 +131,12 @@ function yoasttobottom() {
 }
 add_filter( 'wpseo_metabox_prio', 'yoasttobottom' );
 
+// Move quick redirect to bottom
+function quickredirecttobottom() {
+	return 'low';
+}
+add_filter( 'appip_metabox_priority_filter', 'quickredirecttobottom' );
+
 /**
  * Implement the Custom Header feature.
  */

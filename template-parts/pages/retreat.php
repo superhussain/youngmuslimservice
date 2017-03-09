@@ -12,11 +12,17 @@
           <a href="<?php echo get_permalink(31); ?>" class="button hero__register-button">Register Today!</a>
         <?php } ?>
       </div>
-      <?php if (get_field('retreat_video_code')): ?>
+      <?php if (get_field('retreat_video_code')) { ?>
         <div class="hero__video">
           <iframe src="https://www.youtube.com/embed/<?php the_field('retreat_video_code'); ?>" frameborder="0" allowfullscreen></iframe>
         </div>
-      <?php endif; ?>
+      <?php } else { ?>
+        <div class="hero__video no-video">
+          <p><strong>Video Coming Soon!</strong></p>
+          <p>We are currently in the process of finalizing the promotional video for this year.</p>
+          <p><a href="<?php echo get_permalink(41); ?>">Click here for previous event videos.</a></p>
+        </div>
+      <?php } ?>
     </div>
   </section>
 

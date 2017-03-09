@@ -25,7 +25,7 @@ body.page-past-events #main
         position absolute
       &.fixed
         position fixed
-        top 120px
+        top 60px
     .gallery__list
       background-color rgba($black, 0.05)
       list-style none
@@ -65,3 +65,32 @@ body.page-past-events #main
           left 0
           background-color $orange
           padding: 3px
+      .retreat__video
+        position relative
+        width: 100%
+        height 0
+        max-width 480px
+        margin 0 auto 4em
+        padding-bottom 56.25%
+        @media mobile
+          padding-bottom 52%
+        @media phablet
+          padding-bottom 44%
+        @media tablet
+          padding-bottom 32%
+        @media desktop
+          min-width 400px
+          // padding-bottom 25.5%
+        iframe
+          position absolute
+          width 100%
+          height 100%;
+          left 0
+          top 0
+          border-radius 0.5em
+          box-shadow 0 50px 50px -40px rgba($black, 0.25)
+          transform scale(0.99)
+          transition 200ms ease-in-out
+          &:hover
+            transform scale(1)
+            box-shadow 0 60px 70px -55px rgba($black, 0.25)

@@ -67,7 +67,7 @@ function gallerySideBarFixed() {
     if (location.href.indexOf('_id=41') > -1 || location.href.indexOf('/past-events') > -1) {
       if (window.matchMedia("(min-width: 1000px)").matches) {
         var vscroll = document.body.scrollTop;
-        if (vscroll > 480) {
+        if (vscroll > 520) {
           $('.gallery__controls').addClass('fixed');
         } else {
           $('.gallery__controls').removeClass('fixed');
